@@ -16,16 +16,16 @@
 body {
   background-color: var(--ligthGray);
   padding: 25px;
-  min-width: 600px;
 }
 
 .encabezado {
-  background-color: var(--purple);
-  display: flex;
-  align-items: center;
-  padding: 15px;
   gap: 10px;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   border-radius: 15px 15px 0 0;
+  background-color: var(--purple);
 }
 
 .encabezado figure img {
@@ -113,6 +113,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
   background-color: white;
   border-radius: 0 0 15px 15px;
 }
@@ -152,14 +153,15 @@ body {
   gap: 10px;
 }
 
-.pokemon {
+/* .pokemon {
   width: 100px;
   height: 150px;
   background-color: bisque;
   border-radius: 20px;
   border: 1px solid black;
   padding: 5px;
-}
+} */
+
 .hidden {
   visibility: hidden;
 }
@@ -178,7 +180,7 @@ body {
   .info-pokemon {
     width: 85%;
     height: 60vh;
-    transform: translateY(-100px);
+    transform: translateY(-50px);
     z-index: 1;
   }
   .charizard-baby {
@@ -186,5 +188,14 @@ body {
   }
   .pokeball {
     display: none;
+  }
+  .footer-content {
+    gap: 0px;
+    padding-top: 15px;
+    flex-direction: column;
+  }
+  .footer-content div {
+    width: 100%;
+    justify-content: center;
   }
 }
