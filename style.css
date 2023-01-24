@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  text-align: center;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
@@ -92,6 +93,7 @@ body {
   display: flex;
   justify-content: space-around;
   gap: 20px;
+  align-items: center;
 }
 
 .row-item {
@@ -129,7 +131,6 @@ body {
 
 .footer-content figure {
   padding: 15px;
-  background-color: var(--ligthpurple);
   border-radius: 10px;
   margin: 10px;
 }
@@ -212,13 +213,6 @@ main {
   width: 100%;
   height: 50px;
   object-fit: cover;
-}
-
-.card__abilities {
-  padding: 2px 8px;
-  background-color: #27ae60;
-  border-radius: 20px;
-  font-style: italic;
 }
 
 .form__search input {
