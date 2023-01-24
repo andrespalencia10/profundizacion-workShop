@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+      integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>PokeApi</title>
+  </head>
+  <body>
+    <header class="encabezado">
+      <figure class="pokeball">
+        <img
+          src="https://www.pngall.com/wp-content/uploads/4/Pokeball-PNG-Images.png"
+          alt="logo"
+        />
+      </figure>
+
+      <h1>Pokédex_</h1>
+      <form class="form__search">
+        <input
+          id="inputSearch"
+          type="text"
+          placeholder="Enter a pokemon name"
+        />
+        <button type="submit">Buscar</button>
+      </form>
+    </header>
+
+    <main class="main-container" id="container">
+      <section class="charizard-container">
+        <div class="title">
+          <figure>
+            <img
+              class="icon"
+              src="https://static.vecteezy.com/system/resources/previews/001/188/706/original/flame-png.png"
+              alt="llama"
+            />
+          </figure>
+          <h2 class="pokemonName">CHARIZARD</h2>
+        </div>
+        <figure class="image-charizard">
+          <img
+            class="pokemonImg"
+            src="https://www.pngmart.com/files/12/Charizard-PNG-Free-Download.png"
+            alt="chaizard"
+          />
+        </figure>
+      </section>
+      <article class="info-pokemon">
+        <div class="row-info">
+          <div class="row-item">
+            <span class="title-info">LEVEL</span>
+            <span class="info-text level">100</span>
+          </div>
+        </div>
+        <div class="row-info">
+          <div class="row-item">
+            <span class="title-info">TYPE</span>
+            <span class="info-text type">FIRE</span>
+          </div>
+          <div class="row-item">
+            <span class="title-info">HABILITY</span>
+            <span class="info-text hability">FLAMES</span>
+          </div>
+        </div>
+        <div class="row-info">
+          <div class="row-item">
+            <span class="title-info">HEIGHT</span>
+            <span class="info-text height">1.7 m</span>
+          </div>
+          <div class="row-item">
+            <span class="title-info">WEIGHT</span>
+            <span class="info-text weight">90.5 Kg</span>
+          </div>
+        </div>
+      </article>
+    </main>
+    <footer class="footer-content">
+      <h3>OTHERS</h3>
+      <div id="containerCards"></div>
+    </footer>
+
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
