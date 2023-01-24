@@ -25,6 +25,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   border-radius: 15px 15px 0 0;
+  justify-content: space-around;
   background-color: var(--purple);
 }
 
@@ -112,8 +113,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
   flex-wrap: wrap;
+  gap: 0px;
+  padding-top: 15px;
+  flex-direction: column;
   background-color: white;
   border-radius: 0 0 15px 15px;
 }
@@ -137,34 +140,24 @@ body {
 }
 
 .footer-content div {
+  gap: 10px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   padding: 20px;
-  width: 65%;
+  width: 100%;
+  justify-content: center;
 }
 
-.charizard-baby {
-  display: none;
-}
 #container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-/* .pokemon {
-  width: 100px;
-  height: 150px;
-  background-color: bisque;
-  border-radius: 20px;
-  border: 1px solid black;
-  padding: 5px;
-} */
-
 .hidden {
   visibility: hidden;
 }
+
 @media screen and (max-width: 700px) {
   .encabezado {
     justify-content: center;
@@ -189,13 +182,58 @@ body {
   .pokeball {
     display: none;
   }
-  .footer-content {
-    gap: 0px;
-    padding-top: 15px;
-    flex-direction: column;
-  }
-  .footer-content div {
-    width: 100%;
-    justify-content: center;
-  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 180px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.card__title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card__image {
+  width: 100%;
+  height: 50px;
+  object-fit: cover;
+}
+
+.card__abilities {
+  padding: 2px 8px;
+  background-color: #27ae60;
+  border-radius: 20px;
+  font-style: italic;
+}
+
+.form__search input {
+  padding: 5px 15px;
+  opacity: 0.35;
+  border: none;
+}
+
+.form__search button {
+  padding: 5px 15px;
+  background-color: #f5f6fa;
+  border: none;
+}
+
+.form__search button:hover {
+  background-color: #27ae60;
+  cursor: pointer;
+  color: #fff;
 }
