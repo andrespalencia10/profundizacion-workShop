@@ -48,12 +48,12 @@ const renderPokemons = (arrayPokemons) => {
       pokemom.image
     }" alt="Ditto" class="card__image">
             </figure>
-            <p class="card__info">Peso: ${pokemom.weight}</p>
+            <!-- <p class="card__info">Peso: ${pokemom.weight}</p>
             <p class="card__info">Altura: ${pokemom.height}</p>
             <p class="card__info">Experiencia: ${pokemom.experience}</p>
             <p class="card__info">Habilidades:
             ${renderAbilities(pokemom.abilities)}
-            </p>
+            </p> -->
         </section>
         `;
   });
@@ -91,6 +91,7 @@ search.addEventListener("submit", async (event) => {
 });
 
 const renderInfo = (infoArrays) => {
+  const num = document.querySelector(".num");
   const icon = document.querySelector(".icon");
   const pokemonName = document.querySelector(".pokemonName");
   const pokemonImg = document.querySelector(".pokemonImg");
@@ -101,6 +102,7 @@ const renderInfo = (infoArrays) => {
   const weight = document.querySelector(".weight");
 
   infoArrays.forEach((infoArray) => {
+    num.textContent = infoArray.id;
     icon.src = infoArray.icon;
     pokemonName.textContent = infoArray.name;
     pokemonImg.src = infoArray.image;
@@ -110,6 +112,8 @@ const renderInfo = (infoArrays) => {
     height.textContent = infoArray.height;
     weight.textContent = infoArray.weight;
   });
+
+  console.log(infoArrays);
 };
 
 containerCards.addEventListener("click", (e) => {
