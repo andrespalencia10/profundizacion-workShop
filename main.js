@@ -42,18 +42,9 @@ const renderPokemons = (arrayPokemons) => {
   arrayPokemons.forEach((pokemom) => {
     containerCards.innerHTML += `
         <section class="card">
-            <p class="card__title">${pokemom.name}</p>
             <figure id="${pokemom.id}">
-                <img id="${pokemom.id}" src="${
-      pokemom.image
-    }" alt="Ditto" class="card__image">
+                <img id="${pokemom.id}" src="${pokemom.image}" alt="Ditto" class="card__image">
             </figure>
-            <!-- <p class="card__info">Peso: ${pokemom.weight}</p>
-            <p class="card__info">Altura: ${pokemom.height}</p>
-            <p class="card__info">Experiencia: ${pokemom.experience}</p>
-            <p class="card__info">Habilidades:
-            ${renderAbilities(pokemom.abilities)}
-            </p> -->
         </section>
         `;
   });
