@@ -29,7 +29,7 @@ const getPokemons = async (url, searchTerm = "") => {
     };
     listPokemons.push(newPokemon);
     if (index + 1 === pokemons.length) {
-      //console.log(listPokemons);
+      console.log(listPokemons);
       renderPokemons(listPokemons);
     }
   });
@@ -66,7 +66,6 @@ const renderAbilities = (arrayAbilities) => {
         <span class="card__abilities">${ability.ability.name}</span>
         `;
   });
-  console.log();
   return abilitiesList;
 };
 
@@ -80,42 +79,13 @@ const renderType = (arrayTipes) => {
   return TipesList;
 };
 
-const renderPokemon = (pokemom) => {
-  containerCards.innerHTML = `
-        <section class="card">
-            <p class="card__title">${pokemom.name}</p>
-            <figure>
-                <img src="${
-                  pokemom.sprites.front_default
-                }" alt="Ditto" class="card__image">
-            </figure>
-            <p class="card__info">Peso: ${pokemom.weight}</p>
-            <p class="card__info">Altura: ${pokemom.height}</p>
-            <p class="card__info">Experiencia: ${pokemom.base_experience}</p>
-            <p class="card__info">Habilidades:
-            ${renderAbilities(pokemom.abilities)}
-            </p>
-        </section>
-        `;
-};
-
 const search = document.querySelector(".form__search");
 
 search.addEventListener("submit", async (event) => {
   event.preventDefault();
-  const inputSearch = document.querySelector("#inputSearch");
-  //Los valores que JavaScript reconoce como false son: undefined, null, 0, '' (strig vacío), NaN.
+  const inputSearch = document.getElementById("inputSearch");
   const searchTerm = inputSearch.value;
   if (searchTerm) {
-    console.log(searchTerm);
-    console.log(typeof searchTerm);
-
-    // const searchURL = `${URL_API}/${searchTerm}`;
-    // const pokemon = await getData(searchURL);
-    // console.log(pokemon);
-    // if (pokemon) {
-    //   renderPokemon(pokemon);
-    // }
     getPokemons(URL_API, searchTerm);
   }
 });
